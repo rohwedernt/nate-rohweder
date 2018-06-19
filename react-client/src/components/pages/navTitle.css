@@ -1,0 +1,16 @@
+a.title {
+  font-family: monospace;
+  padding-left: 2em;
+  height: 1.5em;
+  color: black;
+}
+
+a.title:hover {
+  color: black;
+  text-decoration: initial;
+  font-weight: bold;
+}
+
+a.title:focus {
+  text-decoration: initial;
+}

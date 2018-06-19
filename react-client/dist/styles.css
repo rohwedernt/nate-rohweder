@@ -1,25 +1,21 @@
-header {
-  display: block;
-  background-color: black;
-  width: 100%;
-  height: 50px;
-  color: white;
+* {
+  box-sizing: border-box;
 }
 
-#headerButtons {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+body {
+  background-color: #eeeef0 !important;
 }
 
-.navButton {
-  float: right;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-footer {
-  display: block;
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  color: white;
+#app {
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
 }

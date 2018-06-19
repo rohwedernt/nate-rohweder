@@ -1,0 +1,192 @@
+.expand-box {
+  position: relative;
+  top: 260px;
+}
+
+.round-part {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: red;
+  -moz-transform: scale(0.2);
+  -webkit-transform: scale(0.2);
+  -o-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  transform: scale(0.2);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.square-part {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -moz-transform: scale(0.2);
+  -webkit-transform: scale(0.2);
+  -o-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  transform: scale(0.2);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.round-part .round-textbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.expanded {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  display: table;
+}
+
+.wrapper span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  display: table-cell;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.round-part.expanded .wrapper span {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.expand-button {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  z-index: 999;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.expand-button.clicked {
+  z-index: 9999999999999;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.expand-button.clicked {
+  -webkit-animation: rotateForward 1s 1 ease;
+  -moz-animation: rotateForward 1s 1 ease;
+  -o-animation: rotateForward 1s 1 ease;
+}
+
+.expand-button.doubleclicked {
+  -webkit-animation: rotateBack 1s 1 ease;
+  -moz-animation: rotateBack 1s 1 ease;
+  -o-animation: rotateBack 1s 1 ease;
+}
+
+.wrapper span {
+  padding: 0 10%;
+  display: table-cell;
+}
+
+@-webkit-keyframes rotateForward {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotateForward {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotateForward {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotateBack {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes rotateBack {
+  from {
+    -moz-transform: rotate(360deg);
+  }
+  to {
+    -moz-transform: rotate(0deg);
+  }
+}
+@-o-keyframes rotateBack {
+  from {
+    -o-transform: rotate(360deg);
+  }
+  to {
+    -o-transform: rotate(0deg);
+  }
+}

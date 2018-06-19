@@ -1,0 +1,10 @@
+.menu-item {
+  display: block;
+  font-family: monospace;
+  height: 1.5em;
+  width: fit-content;
+}
+
+.menu-item:focus {
+  color: black
+}
